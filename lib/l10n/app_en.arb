@@ -1,0 +1,23 @@
+{
+  "title": "To Do List",
+  "settings": "Settings",
+  "language": "Language",
+  "mode": "Mode",
+  "welcomeback":"Welcome back !",
+  "email": "Email",
+  "password": "Password",
+  "forgotpassword": "Forgot Password ?",
+  "login": "Login",
+  "orcreatemyaccount": "Or Create My Account ?",
+  "createaccount": "Create Account",
+  "fullname": "Full Name",
+  "addnewtask": "Add New Task",
+  "entertasktitle": "Enter task title",
+  "entertaskdescription": "Enter task description",
+  "selectdate": "Select Date",
+  "save": "Save",
+  "light": "Light",
+  "dark": "Dark",
+  "update": "Update"
+
+}

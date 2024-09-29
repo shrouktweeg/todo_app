@@ -1,0 +1,23 @@
+{
+  "title": "قائمة المهام",
+  "settings": "الاعدادات",
+  "language": "اللغة",
+  "mode": "النمط",
+  "welcomeback":"مرحبًا بعودتك !",
+  "password": "كلمة المرور",
+  "email": "البريد الالكتروني",
+  "forgotpassword": "نسيت كلمة المرور ؟",
+  "login": "تسجيل الدخول",
+  "orcreatemyaccount": "أو قم بإنشاء حسابي؟",
+  "createaccount": "إنشاء حساب",
+  "fullname": "الاسم كامل",
+  "addnewtask": "إضافة مهمة جديدة",
+  "entertasktitle": "أدخل عنوان المهمة",
+  "entertaskdescription": "أدخل وصف المهمة",
+  "selectdate": "حدد التاريخ",
+  "save": "حفظ",
+  "light":"فاتح",
+  "dark":"مظلم",
+  "update": "تعديل"
+
+}
