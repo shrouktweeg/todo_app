@@ -122,12 +122,9 @@ class _RegistrationViewState extends State<RegistrationView> {
                           FirebaseUtils.createAccount(textController.text,
                               passController.text)
                               .then((value) {
-                            if (value==true) {
-                              EasyLoading.dismiss();
-                              SnackBarService.showSuccessMessage(
-                                  "Account successfully Created");
-                              Navigator.pop(context);
-                            }
+                            SnackBarService.showSuccessMessage(
+                                "Account successfully Created");
+                            Navigator.pop(context);
                           });
                         }
                       }

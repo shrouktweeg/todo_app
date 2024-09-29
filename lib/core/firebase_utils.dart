@@ -48,7 +48,7 @@ static Future<void> updateTask(TaskModel task)async{
   docRef.update(task.toFirebase());
 }
 
-  static Future<bool> createAccount(
+  static Future<void> createAccount(
       String emailAddress, String password) async {
     try {
       EasyLoading.show();
@@ -57,52 +57,43 @@ static Future<void> updateTask(TaskModel task)async{
         email: emailAddress,
         password: password,
       );
-      EasyLoading.dismiss();
       print(credential.user?.uid);
-      return Future.value(true);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
         print('The password provided is too weak.');
         EasyLoading.dismiss();
         SnackBarService.showErrorMessage('The password provided is too weak.');
-        return Future.value(false);
       } else if (e.code == 'email-already-in-use') {
         print('The account already exists for that email.');
         EasyLoading.dismiss();
         SnackBarService.showErrorMessage(
-            'The account already exists for that email.');
-        return Future.value(false);
-      }
+            'The account already exists for that email.');}
     } catch (e) {
       print(e);
       EasyLoading.dismiss();
-      return Future.value(false);
     }
-    return Future.value(true);
+    EasyLoading.dismiss();
   }
 
-  static Future<bool> signIn(String emailAddress, String password) async {
+  static Future<void> signIn(String emailAddress, String password) async {
     try {
       EasyLoading.show();
       final credential = await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: emailAddress, password: password);
       print(credential.credential?.token);
-      return Future.value(true);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         print('No user found for that email.');
         EasyLoading.dismiss();
         SnackBarService.showErrorMessage('No user found for that email.');
-        return Future.value(false);
       } else if (e.code == 'wrong-password') {
         print('Wrong password provided for that user.');
         EasyLoading.dismiss();
         SnackBarService.showErrorMessage(
             'Wrong password provided for that user.');
-        return Future.value(false);
       }
     }
-    return Future.value(true);
+    EasyLoading.dismiss();
   }
 }
 /*

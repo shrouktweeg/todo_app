@@ -113,11 +113,8 @@ class _LoginViewState extends State<LoginView> {
                           FirebaseUtils.signIn(textController.text,
                               passController.text)
                               .then((value) {
-                            if (value) {
-                              EasyLoading.dismiss();
-                              Navigator.pushReplacementNamed(
-                                  context, PageRouteName.layout);
-                            }
+                            Navigator.pushReplacementNamed(
+                                context, PageRouteName.layout);
                           });
                         }
                       }, child: Row(
